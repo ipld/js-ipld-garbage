@@ -4,7 +4,7 @@ import { create as createDigest } from 'multiformats/hashes/digest'
 
 const codecs = [0x55, 0x70, 0x71, 0x0129]
 const hashes = [[0x12, 256], [0x16, 256], [0x1b, 256], [0xb220, 256], [0x13, 512], [0x15, 384], [0x14, 512]]
-const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`~!@#$%^&*()-_=+[]{}|\\:;\'",.<>?/ \t\n😀'
+const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`~!@#$%^&*()-_=+[]{}|\\:;\'",.<>?/ \t\n\u263a'
 
 function garbage (count = 200, options = {}) {
   return generate(count, options)[1]

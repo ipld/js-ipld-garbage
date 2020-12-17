@@ -21,8 +21,10 @@ Might yield:
 ```js
 {
   'QbN/}`EO\tb6>\tI,`': 7827882605575541,
-  "~'wD!�S}<Q|d1$�": Uint8Array(692) [
-      116,  12, 191, 180, 214,   0,  88,  26, 116, 213,  88, 109
+  "~'wD!☺S}<Q|d1$☺": Uint8Array(12) [
+    116,  12, 191, 180, 214,
+      0,  88,  26, 116, 213,
+     88, 109
   ],
   'q<': CID(baguqefrapdjrz7rknhnokqxo75ogs2hfpmdqiy7weez55ezaoyh63sd22n4q)
 }
