@@ -1,0 +1,38 @@
+{
+  "name": "ipld-garbage",
+  "version": "1.0.0",
+  "description": "Garbage data generator for the IPLD Data Model",
+  "main": "ipld-garbage.js",
+  "type": "module",
+  "scripts": {
+    "lint": "standard *.js",
+    "build": "npm_config_yes=true npx ipjs build --tests && cp README.md LICENSE dist/",
+    "test:cjs": "npm run build && node dist/cjs/node-test.js",
+    "test:node": "hundreds node test.js",
+    "test:browser": "polendina --cleanup dist/cjs/browser-test.js",
+    "test": "npm run lint && npm run test:node && npm run test:cjs && npm run test:browser",
+    "coverage": "c8 --reporter=html node node test.js && npx st -d coverage -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https+git://github.com/rvagg/ipld-garbage"
+  },
+  "keywords": [
+    "garbage",
+    "IPLD"
+  ],
+  "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@sindresorhus/is": "^4.0.0",
+    "hundreds": "^0.0.9",
+    "polendina": "^1.1.0",
+    "standard": "^16.0.1"
+  },
+  "exports": {
+    "import": "./ipld-garbage.js"
+  },
+  "dependencies": {
+    "multiformats": "^4.4.1"
+  }
+}
