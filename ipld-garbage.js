@@ -122,7 +122,7 @@ const generators = {
     for (let i = 0; i < bytes.length; i++) {
       bytes[i] = rndByte()
     }
-    return [hasher[1], CID.create(1, codec, createDigest(hasher[0], bytes))]
+    return [bytes.length, CID.create(1, codec, createDigest(hasher[0], bytes))]
   }
 }
 
