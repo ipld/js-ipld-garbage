@@ -52,13 +52,10 @@ function rndByte () {
 const generators = {
   list (count, options) {
     const res = []
-    if (count <= 0) {
-      return [1, res]
-    }
     const len = rndSize()
-    let size = 1
+    let size = 0
     for (let i = 0; i < len && size < count; i++) {
-      const x = generate(--count - len, options)
+      const x = generate(count - size, options)
       res.push(x[1])
       size += x[0]
     }
@@ -67,16 +64,13 @@ const generators = {
 
   map (count, options) {
     const res = {}
-    if (count <= 0) {
-      return [1, res]
-    }
     const len = rndSize()
-    let size = 1
+    let size = 0
     for (let i = 0; i < len && size < count; i++) {
       const key = generators.string(5)[1]
-      const x = generate(--count - len, options)
+      const x = generate(count - size, options)
       res[key] = x[1]
-      size += x[0]
+      size += x[0] + key.length
     }
     return [size, res]
   },
@@ -87,7 +81,7 @@ const generators = {
     for (let i = 0; i < len; i++) {
       res.push(rndChar())
     }
-    return [1, res.join('')]
+    return [len, res.join('')]
   },
 
   bytes (bias = 50) {
@@ -96,7 +90,7 @@ const generators = {
     for (let i = 0; i < len; i++) {
       res[i] = rndByte()
     }
-    return [1, res]
+    return [len, res]
   },
 
   boolean  () {
