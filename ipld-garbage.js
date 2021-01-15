@@ -5,16 +5,22 @@ import { create as createDigest } from 'multiformats/hashes/digest'
 const codecs = [0x55, 0x70, 0x71, 0x0129]
 const hashes = [[0x12, 256], [0x16, 256], [0x1b, 256], [0xb220, 256], [0x13, 512], [0x15, 384], [0x14, 512]]
 const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`~!@#$%^&*()-_=+[]{}|\\:;\'",.<>?/ \t\n\u263a'
+const baseOptions = { initialWeights: { map: 10, list: 10 } }
 
-function garbage (count = 200, options = {}) {
+function garbage (count = 200, options) {
+  options = Object.assign({}, baseOptions, options)
   return generate(count, options)[1]
 }
 
 function generate (count, options) {
   let totWeight = 0
+  const weights = Object.assign({}, options.initialWeights, options.weights || {})
+  if (options.initialWeights) {
+    options = Object.assign(options, { initialWeights: null })
+  }
   const types = Object.keys(generators).map((t) => {
     /* c8 ignore next 4 */
-    const weight = options.weights && typeof options.weights[t] === 'number' ? options.weights[t] : 1
+    const weight = weights && typeof weights[t] === 'number' ? weights[t] : 1
     if (weight < 0) {
       throw new TypeError('Cannot have a negative weight')
     }
