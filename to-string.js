@@ -1,7 +1,10 @@
-import CID from 'multiformats/cid'
-// import garbage from 'ipld-garbage'
+import { CID } from 'multiformats/cid'
 
-export default function toString (obj) {
+/**
+ * @param {any} obj
+ * @returns {string}
+ */
+export function toString (obj) {
   if (CID.asCID(obj)) {
     return `CID.parse('${obj.toString()}')`
   }
@@ -27,6 +30,7 @@ export default function toString (obj) {
     })
     return `{${props.join(',')}}`
   }
+  throw new Error(`Invalid IPLD kind: ${Object.prototype.toString.call(obj)}`)
 }
 
 // console.log(toString(garbage(100, { weights: { list: 0 } })))

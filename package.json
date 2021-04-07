@@ -6,8 +6,11 @@
   "type": "module",
   "scripts": {
     "lint": "standard *.js",
-    "build": "npm_config_yes=true npx ipjs build --tests && cp README.md LICENSE dist/",
-    "test:cjs": "npm run build && node dist/cjs/node-test.js",
+    "build": "npm run build:js && npm run build:types",
+    "build:js": "npm_config_yes=true ipjs build --tests --main && npm run build:copy",
+    "build:copy": "cp -a tsconfig.json *.js *.ts dist/",
+    "build:types": "npm run build:copy && cd dist && tsc --build",
+    "test:cjs": "npm run build",
     "test:node": "hundreds node test.js",
     "test:browser": "polendina --runner=bare-sync --cleanup dist/cjs/browser-test.js",
     "test": "npm run lint && npm run test:node && npm run test:cjs && npm run test:browser",
@@ -26,8 +29,10 @@
   "devDependencies": {
     "@sindresorhus/is": "^4.0.0",
     "hundreds": "^0.0.9",
+    "ipjs": "^5.0.0",
     "polendina": "^1.1.0",
-    "standard": "^16.0.1"
+    "standard": "^16.0.3",
+    "typescript": "^4.2.3"
   },
   "exports": {
     ".": {
@@ -38,6 +43,13 @@
     }
   },
   "dependencies": {
-    "multiformats": "^4.4.1"
+    "multiformats": "^6.0.0"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "types/*"
+      ]
+    }
   }
 }

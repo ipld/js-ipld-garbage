@@ -1,4 +1,4 @@
-import garbage from 'ipld-garbage'
+import { garbage } from 'ipld-garbage'
 import is from '@sindresorhus/is'
 
 const expectedTypes = ['null', 'boolean', 'int', 'float', 'string', 'Uint8Array', 'Array', 'Object', 'CID']

@@ -18,7 +18,7 @@ Where `count` determines the approximate target number of bytes a garbage object
 Where you provide a custom `weights`, it will override `initialWeights`. e.g. `{ weights: { float: 0 } }` will result in no floats at all, even for the initial object.
 
 ```js
-import garbage from 'ipld-garbage'
+import { garbage } from 'ipld-garbage'
 
 console.log(garbage(100, { weights: { float: 0, object: 0 }}))
 ```
@@ -49,7 +49,7 @@ All IPLD Data Model types are within range for random creation, including top-le
 * map
 * CID
 
-Use `import garbageToString from 'ipld-garbage/to-string'` to import a function that can turn an object returned by `garbage()` to a JavaScript string. This may be useful for generating a fixed set of test fixtures rather than relying on randomness during each run.
+Use `import { toString } from 'ipld-garbage/to-string'` to import a function that can turn an object returned by `garbage()` to a JavaScript string. This may be useful for generating a fixed set of test fixtures rather than relying on randomness during each run.
 
 ## License and Copyright
 
