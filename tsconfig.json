@@ -20,19 +20,26 @@
     "moduleResolution": "node",
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
     "outDir": "types",
     "skipLibCheck": true,
     "stripInternal": true,
     "resolveJsonModule": true,
-    "baseUrl": "."
+    "emitDeclarationOnly": true,
+    "baseUrl": ".",
+    "paths": {
+      "ipld-garbage": [
+        "./ipld-garbage.js"
+      ]
+    }
   },
   "include": [
     "ipld-garbage.js",
-		"to-string.js"
+    "to-string.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "esm",
+    "cjs"
   ],
   "compileOnSave": false
 }

@@ -3,8 +3,14 @@ import is from '@sindresorhus/is'
 
 const expectedTypes = ['null', 'boolean', 'int', 'float', 'string', 'Uint8Array', 'Array', 'Object', 'CID']
 
+/** @type {Record<string, number>} */
 const types = {}
+/**
+ * @param {any} obj
+ * @returns {string}
+ */
 const account = (obj) => {
+  /** @type {string} */
   let type = is(obj)
   if (type === 'Object' && obj.asCID === obj) {
     type = 'CID'

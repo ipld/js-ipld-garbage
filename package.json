@@ -3,16 +3,17 @@
   "version": "3.0.0",
   "description": "Garbage data generator for the IPLD Data Model",
   "main": "ipld-garbage.js",
+  "types": "./types/ipld-garbage.d.ts",
   "type": "module",
   "scripts": {
     "lint": "standard *.js",
     "build": "npm run build:js && npm run build:types",
-    "build:js": "npm_config_yes=true ipjs build --tests --main && npm run build:copy",
+    "build:js": "ipjs build --tests --main && npm run build:copy",
     "build:copy": "cp -a tsconfig.json *.js *.ts dist/",
     "build:types": "npm run build:copy && cd dist && tsc --build",
     "test:cjs": "npm run build",
     "test:node": "hundreds node test.js",
-    "test:browser": "polendina --runner=bare-sync --cleanup dist/cjs/browser-test.js",
+    "test:browser": "polendina --page --worker --serviceworker --runner=bare-sync --cleanup dist/cjs/browser-test.js",
     "test": "npm run lint && npm run test:node && npm run test:cjs && npm run test:browser",
     "coverage": "c8 --reporter=html node node test.js && npx st -d coverage -p 8080"
   },
@@ -43,11 +44,14 @@
     }
   },
   "dependencies": {
-    "multiformats": "^6.0.0"
+    "multiformats": "^7.0.0"
   },
   "typesVersions": {
     "*": {
       "*": [
+        "types/*"
+      ],
+      "types/*": [
         "types/*"
       ]
     }
