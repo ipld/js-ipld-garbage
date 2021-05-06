@@ -44,7 +44,7 @@
     }
   },
   "dependencies": {
-    "multiformats": "^7.0.0"
+    "multiformats": "^8.0.3"
   },
   "typesVersions": {
     "*": {
