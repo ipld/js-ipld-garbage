@@ -1,3 +1,5 @@
+# [4.0.0](https://github.com/rvagg/js-ipld-garbage/compare/v3.0.6...v4.0.0) (2021-05-27)
+
 ## [3.0.6](https://github.com/rvagg/js-ipld-garbage/compare/v3.0.5...v3.0.6) (2021-05-27)
 
 
