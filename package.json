@@ -1,6 +1,6 @@
 {
   "name": "ipld-garbage",
-  "version": "3.0.3",
+  "version": "0.0.0-development",
   "description": "Garbage data generator for the IPLD Data Model",
   "main": "ipld-garbage.js",
   "types": "./types/ipld-garbage.d.ts",
@@ -15,11 +15,12 @@
     "test:node": "hundreds node test.js",
     "test:browser": "polendina --page --worker --serviceworker --runner=bare-sync --cleanup dist/cjs/browser-test.js",
     "test": "npm run lint && npm run test:node && npm run test:cjs && npm run test:browser",
-    "coverage": "c8 --reporter=html node node test.js && npx st -d coverage -p 8080"
+    "coverage": "c8 --reporter=html node node test.js && npx st -d coverage -p 8080",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "https+git://github.com/rvagg/ipld-garbage"
+    "url": "https://github.com/rvagg/js-ipld-garbage"
   },
   "keywords": [
     "garbage",
@@ -33,7 +34,8 @@
     "ipjs": "^5.0.0",
     "polendina": "^1.1.0",
     "standard": "^16.0.3",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+    "semantic-release": "^17.4.3"
   },
   "exports": {
     ".": {
