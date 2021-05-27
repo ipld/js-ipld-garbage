@@ -39,11 +39,13 @@ jobs:
         run: |
           npm install --no-progress --no-package-lock --no-save
       - name: Build
+        run: |
           npm run build
       - name: Install plugins
         run: |
           npm install \
             @semantic-release/commit-analyzer \
+            conventional-changelog-conventionalcommits \
             @semantic-release/release-notes-generator \
             @semantic-release/npm \
             @semantic-release/github \
