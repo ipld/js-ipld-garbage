@@ -9,13 +9,13 @@ jobs:
         os: [macos-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v2.3.4
       - name: Use Node.js ${{ matrix.node }}
         uses: actions/setup-node@v2.1.5
         with:
           node-version: ${{ matrix.node }}
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           npm install --no-progress --no-package-lock
       - name: Run tests
@@ -35,6 +35,11 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with:
           node-version: 14
+      - name: Install dependencies
+        run: |
+          npm install --no-progress --no-package-lock --no-save
+      - name: Build
+          npm run build
       - name: Install plugins
         run: |
           npm install \
