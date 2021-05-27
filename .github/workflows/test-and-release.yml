@@ -28,17 +28,23 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           fetch-depth: 0
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: 14
-      - name: Install dependencies
+      - name: Install plugins
         run: |
-          npm install --no-progress --no-package-lock --no-save
-          npm install @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/npm @semantic-release/github @semantic-release/git @semantic-release/changelog --no-progress --no-package-lock --no-save
+          npm install \
+            @semantic-release/commit-analyzer \
+            @semantic-release/release-notes-generator \
+            @semantic-release/npm \
+            @semantic-release/github \
+            @semantic-release/git \
+            @semantic-release/changelog \
+            --no-progress --no-package-lock --no-save
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
