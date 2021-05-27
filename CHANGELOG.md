@@ -1,3 +1,12 @@
+### [4.0.1](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.0...v4.0.1) (2021-05-27)
+
+
+### Trivial Changes
+
+* adjust release rules ([f103a92](https://github.com/rvagg/js-ipld-garbage/commit/f103a92726ef58911042a6580366892bd6ac40d8))
+* fix oopsie json ([80ca465](https://github.com/rvagg/js-ipld-garbage/commit/80ca4652afa5a336bf49d0ca63d197a274a9bdeb))
+* further fixes for conventionalcommits handling ([c28fe4c](https://github.com/rvagg/js-ipld-garbage/commit/c28fe4cdc4bfe4b580b7b137ab327ebb2ca9cc46))
+
 # [4.0.0](https://github.com/rvagg/js-ipld-garbage/compare/v3.0.6...v4.0.0) (2021-05-27)
 
 ## [3.0.6](https://github.com/rvagg/js-ipld-garbage/compare/v3.0.5...v3.0.6) (2021-05-27)
