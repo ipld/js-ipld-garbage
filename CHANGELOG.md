@@ -1,3 +1,10 @@
+### [4.0.6](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.5...v4.0.6) (2021-08-05)
+
+
+### Trivial Changes
+
+* **deps:** bump actions/setup-node from 2.3.2 to 2.4.0 ([c342987](https://github.com/rvagg/js-ipld-garbage/commit/c34298748773b0f0951bb7a8ca05aea47f7c5f11))
+
 ### [4.0.5](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.4...v4.0.5) (2021-08-05)
 
 
