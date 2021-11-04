@@ -1,3 +1,10 @@
+### [4.0.9](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.8...v4.0.9) (2021-11-04)
+
+
+### Trivial Changes
+
+* **deps:** bump actions/checkout from 2.3.5 to 2.4.0 ([b1dee24](https://github.com/rvagg/js-ipld-garbage/commit/b1dee24867b38b299e79c7864b6a1b68d1342d98))
+
 ### [4.0.8](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.7...v4.0.8) (2021-10-18)
 
 
