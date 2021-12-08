@@ -1,3 +1,11 @@
+### [4.0.10](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.9...v4.0.10) (2021-12-08)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump polendina from 1.1.1 to 2.0.0 ([#17](https://github.com/rvagg/js-ipld-garbage/issues/17)) ([d7f846e](https://github.com/rvagg/js-ipld-garbage/commit/d7f846ef12bb3a4f0f77ee823f120210e1e5992a))
+* **no-release:** bump actions/setup-node from 2.4.1 to 2.5.0 ([#16](https://github.com/rvagg/js-ipld-garbage/issues/16)) ([48a5b0a](https://github.com/rvagg/js-ipld-garbage/commit/48a5b0a919e7d4d6cdced42690fc31ba9adf9d08))
+
 ### [4.0.9](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.8...v4.0.9) (2021-11-04)
 
 
