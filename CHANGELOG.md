@@ -1,3 +1,23 @@
+## [5.0.0](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.10...v5.0.0) (2022-06-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove Node.js 12.x support (#29)
+
+### Trivial Changes
+
+* **no-release:** bump @sindresorhus/is from 4.6.0 to 5.1.0 ([#28](https://github.com/rvagg/js-ipld-garbage/issues/28)) ([2e5ee08](https://github.com/rvagg/js-ipld-garbage/commit/2e5ee089be8c5ea70128bdb795acdfc6b2880a80))
+* **no-release:** bump actions/checkout from 2.4.0 to 3 ([#20](https://github.com/rvagg/js-ipld-garbage/issues/20)) ([7f94712](https://github.com/rvagg/js-ipld-garbage/commit/7f947129b03f578d3add889a9e9a2717461a1267))
+* **no-release:** bump actions/setup-node from 2.5.0 to 2.5.1 ([#18](https://github.com/rvagg/js-ipld-garbage/issues/18)) ([a47a558](https://github.com/rvagg/js-ipld-garbage/commit/a47a558a73e733539e0d1a797b4b1e26ebffa891))
+* **no-release:** bump actions/setup-node from 2.5.1 to 3.0.0 ([#19](https://github.com/rvagg/js-ipld-garbage/issues/19)) ([d5297a2](https://github.com/rvagg/js-ipld-garbage/commit/d5297a26ade5676b4180a32c86bc1c6073e26461))
+* **no-release:** bump actions/setup-node from 3.0.0 to 3.1.1 ([#22](https://github.com/rvagg/js-ipld-garbage/issues/22)) ([606e04a](https://github.com/rvagg/js-ipld-garbage/commit/606e04aee70071d2f2c7b397050efe2c5cdd2252))
+* **no-release:** bump actions/setup-node from 3.1.1 to 3.2.0 ([#25](https://github.com/rvagg/js-ipld-garbage/issues/25)) ([272daa9](https://github.com/rvagg/js-ipld-garbage/commit/272daa97ad768000197587baf3bc99645e07ceb9))
+* **no-release:** bump actions/setup-node from 3.2.0 to 3.3.0 ([#26](https://github.com/rvagg/js-ipld-garbage/issues/26)) ([576f82f](https://github.com/rvagg/js-ipld-garbage/commit/576f82f6bf1d9d62ac7a22e5c274e915d8f64f77))
+* **no-release:** bump polendina from 2.0.15 to 3.0.0 ([#24](https://github.com/rvagg/js-ipld-garbage/issues/24)) ([03e7e0b](https://github.com/rvagg/js-ipld-garbage/commit/03e7e0b2fab5ba458ef0355287a6b2c9cdebbc37))
+* **no-release:** bump standard from 16.0.4 to 17.0.0 ([#23](https://github.com/rvagg/js-ipld-garbage/issues/23)) ([4b434a5](https://github.com/rvagg/js-ipld-garbage/commit/4b434a5fc5ba6aa00c174972d517ee14616f9034))
+* remove Node.js 12.x support ([#29](https://github.com/rvagg/js-ipld-garbage/issues/29)) ([066a2b1](https://github.com/rvagg/js-ipld-garbage/commit/066a2b1a76fa5e0774482b46065aab0adbdbc561))
+
 ### [4.0.10](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.9...v4.0.10) (2021-12-08)
 
 
