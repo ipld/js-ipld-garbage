@@ -28,7 +28,7 @@
   "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@sindresorhus/is": "^4.0.0",
+    "@sindresorhus/is": "^5.1.0",
     "hundreds": "^0.0.9",
     "ipjs": "^5.0.0",
     "polendina": "^3.0.0",
