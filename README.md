@@ -1,6 +1,23 @@
-# ipld-garbage
+# ipld-garbage <!-- omit in toc -->
 
-Generate garbage objects conformant with the [IPLD Data Model](https://docs.ipld.io/#the-data-model). Useful for fuzzing.
+[![codecov](https://img.shields.io/codecov/c/github/achingbrain/js-ipld-garbage.svg?style=flat-square)](https://codecov.io/gh/achingbrain/js-ipld-garbage)
+[![CI](https://img.shields.io/github/workflow/status/achingbrain/js-ipld-garbage/test%20&%20maybe%20release/master?style=flat-square)](https://github.com/achingbrain/js-ipld-garbage/actions/workflows/js-test-and-release.yml)
+
+> Garbage data generator for the IPLD Data Model
+
+## Table of contents <!-- omit in toc -->
+
+- [Install](#install)
+- [API](#api)
+  - [`options`](#options)
+- [License](#license)
+- [Contribute](#contribute)
+
+## Install
+
+```console
+$ npm i ipld-garbage
+```
 
 Based on [substack's "garbage"](https://github.com/substack/node-garbage).
 
@@ -12,8 +29,8 @@ Where `count` determines the approximate target number of bytes a garbage object
 
 ### `options`
 
-  * `options.weights` an object with properties matching the IPLD data model types (see below) with numbers (>= `0`) that will weight randomness selection. Default: `{ list: 1, map: 1, string: 1, bytes: 1, boolean: 1, integer: 1, float: 1, null: 1, CID: 1 }`.
-  * `options.initialWeights` an object, similar to `options.weights`, that only applies to the initial object. Subsequent object creation will use `options.weights`. This allows for weighting of the container object to be more typical of IPLD data, which is typically some kind of map or list. Default `{ list: 10, map: 10, string: 1, bytes: 1, boolean: 1, integer: 1, float: 1, null: 1, CID: 1 }`.
+- `options.weights` an object with properties matching the IPLD data model types (see below) with numbers (>= `0`) that will weight randomness selection. Default: `{ list: 1, map: 1, string: 1, bytes: 1, boolean: 1, integer: 1, float: 1, null: 1, CID: 1 }`.
+- `options.initialWeights` an object, similar to `options.weights`, that only applies to the initial object. Subsequent object creation will use `options.weights`. This allows for weighting of the container object to be more typical of IPLD data, which is typically some kind of map or list. Default `{ list: 10, map: 10, string: 1, bytes: 1, boolean: 1, integer: 1, float: 1, null: 1, CID: 1 }`.
 
 Where you provide a custom `weights`, it will override `initialWeights`. e.g. `{ weights: { float: 0 } }` will result in no floats at all, even for the initial object.
 
@@ -39,22 +56,25 @@ Might yield:
 
 All IPLD Data Model types are within range for random creation, including top-level returns (a single call to `garbage()` might just return a `null`):
 
-* null
-* boolean
-* integer
-* float
-* string
-* bytes
-* list
-* map
-* CID
+- null
+- boolean
+- integer
+- float
+- string
+- bytes
+- list
+- map
+- CID
 
 Use `import { toString } from 'ipld-garbage/to-string'` to import a function that can turn an object returned by `garbage()` to a JavaScript string. This may be useful for generating a fixed set of test fixtures rather than relying on randomness during each run.
 
-## License and Copyright
+## License
 
-Copyright 2020 Rod Vagg
+Licensed under either of
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+- Apache 2.0, ([LICENSE-APACHE](LICENSE-APACHE) / <http://www.apache.org/licenses/LICENSE-2.0>)
+- MIT ([LICENSE-MIT](LICENSE-MIT) / <http://opensource.org/licenses/MIT>)
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+## Contribute
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.

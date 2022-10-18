@@ -2,58 +2,62 @@
   "name": "ipld-garbage",
   "version": "3.0.5",
   "description": "Garbage data generator for the IPLD Data Model",
-  "main": "ipld-garbage.js",
-  "types": "./types/ipld-garbage.d.ts",
-  "type": "module",
-  "scripts": {
-    "lint": "standard *.js",
-    "build": "npm run build:js && npm run build:types",
-    "build:js": "ipjs build --tests --main && npm run build:copy",
-    "build:copy": "cp -a tsconfig.json *.js *.ts dist/",
-    "build:types": "npm run build:copy && cd dist && tsc --build",
-    "test:cjs": "npm run build",
-    "test:node": "hundreds node test.js",
-    "test:browser": "polendina --page --worker --serviceworker --runner=bare-sync --cleanup dist/cjs/browser-test.js",
-    "test": "npm run lint && npm run test:node && npm run test:cjs && npm run test:browser",
-    "coverage": "c8 --reporter=html node node test.js && npx st -d coverage -p 8080"
-  },
+  "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
+  "license": "Apache-2.0 OR MIT",
+  "homepage": "https://github.com/achingbrain/js-ipld-garbage#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rvagg/js-ipld-garbage"
+    "url": "git+https://github.com/achingbrain/js-ipld-garbage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/achingbrain/js-ipld-garbage/issues"
   },
   "keywords": [
-    "garbage",
-    "IPLD"
+    "IPLD",
+    "garbage"
   ],
-  "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "@sindresorhus/is": "^5.1.0",
-    "hundreds": "^0.0.9",
-    "ipjs": "^5.0.0",
-    "polendina": "^3.0.0",
-    "standard": "^17.0.0",
-    "typescript": "^4.2.3"
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   },
-  "exports": {
-    ".": {
-      "import": "./ipld-garbage.js"
-    },
-    "./to-string": {
-      "import": "./to-string.js"
-    }
-  },
-  "dependencies": {
-    "multiformats": "^9.0.0"
-  },
+  "type": "module",
+  "types": "./dist/src/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
-        "types/*"
+        "*",
+        "dist/*",
+        "dist/src/*",
+        "dist/src/*/index"
       ],
-      "types/*": [
-        "types/*"
+      "src/*": [
+        "*",
+        "dist/*",
+        "dist/src/*",
+        "dist/src/*/index"
       ]
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "!dist/test",
+    "!**/*.tsbuildinfo"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./to-string": {
+      "types": "./src/to-string.d.ts",
+      "import": "./src/to-string.js"
+    }
+  },
+  "eslintConfig": {
+    "extends": "ipfs",
+    "parserOptions": {
+      "sourceType": "module"
     }
   },
   "release": {
@@ -61,37 +65,106 @@
       "master"
     ],
     "plugins": [
-      ["@semantic-release/commit-analyzer", {
-        "preset": "conventionalcommits",
-        "releaseRules": [
-          {"breaking": true, "release": "major"},
-          {"revert": true, "release": "patch"},
-          {"type": "feat", "release": "minor"},
-          {"type": "fix", "release": "patch"},
-          {"type": "chore", "release": "patch"},
-          {"type": "docs", "release": "patch"},
-          {"type": "test", "release": "patch"},
-          {"scope": "no-release", "release": false}
-        ]
-      }],
-      ["@semantic-release/release-notes-generator", {
-        "preset": "conventionalcommits",
-        "presetConfig": {
-          "types": [
-            {"type": "feat", "section": "Features"},
-            {"type": "fix", "section": "Bug Fixes"},
-            {"type": "chore", "section": "Trivial Changes"},
-            {"type": "docs", "section": "Trivial Changes"},
-            {"type": "test", "section": "Tests"}
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "breaking": true,
+              "release": "major"
+            },
+            {
+              "revert": true,
+              "release": "patch"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            },
+            {
+              "type": "deps",
+              "release": "patch"
+            },
+            {
+              "scope": "no-release",
+              "release": false
+            }
           ]
         }
-      }],
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "chore",
+                "section": "Trivial Changes"
+              },
+              {
+                "type": "docs",
+                "section": "Documentation"
+              },
+              {
+                "type": "deps",
+                "section": "Dependencies"
+              },
+              {
+                "type": "test",
+                "section": "Tests"
+              }
+            ]
+          }
+        }
+      ],
       "@semantic-release/changelog",
-      ["@semantic-release/npm", {
-        "pkgRoot": "dist"
-      }],
+      "@semantic-release/npm",
       "@semantic-release/github",
       "@semantic-release/git"
     ]
+  },
+  "scripts": {
+    "clean": "aegir clean",
+    "lint": "aegir lint",
+    "build": "aegir build",
+    "release": "aegir release",
+    "test": "npm run lint && aegir test",
+    "test:ts": "npm run test --prefix test/ts-use",
+    "test:node": "aegir test -t node --cov",
+    "test:chrome": "aegir test -t browser --cov",
+    "test:chrome-webworker": "aegir test -t webworker",
+    "test:firefox": "aegir test -t browser -- --browser firefox",
+    "test:firefox-webworker": "aegir test -t webworker -- --browser firefox",
+    "test:electron-main": "aegir test -t electron-main",
+    "dep-check": "aegir dep-check"
+  },
+  "dependencies": {
+    "multiformats": "^10.0.1"
+  },
+  "devDependencies": {
+    "@sindresorhus/is": "^5.3.0",
+    "aegir": "^37.5.6"
   }
 }

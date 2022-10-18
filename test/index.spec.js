@@ -1,4 +1,4 @@
-import { garbage } from 'ipld-garbage'
+import { garbage } from '../src/index.js'
 import is from '@sindresorhus/is'
 
 const expectedTypes = ['null', 'boolean', 'int', 'float', 'string', 'Uint8Array', 'Array', 'Object', 'CID']
@@ -49,4 +49,4 @@ for (const type of Object.keys(types)) {
   }
 }
 
-console.log('\u001b[32m✔\u001b[39m yep')
+console.log('\u001b[32m✔\u001b[39m yep') // eslint-disable-line no-console
