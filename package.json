@@ -1,5 +1,5 @@
 {
-  "name": "ipld-garbage",
+  "name": "@ipld/garbage",
   "version": "3.0.5",
   "description": "Garbage data generator for the IPLD Data Model",
   "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
@@ -161,7 +161,7 @@
     "dep-check": "aegir dep-check"
   },
   "dependencies": {
-    "multiformats": "^10.0.1"
+    "multiformats": "^10.0.2"
   },
   "devDependencies": {
     "@sindresorhus/is": "^5.3.0",
