@@ -1,3 +1,27 @@
+## [6.0.0](https://github.com/ipld/js-ipld-garbage/compare/v5.0.0...v6.0.0) (2022-10-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* publish as esm-only (#36)
+
+### Features
+
+* publish as esm-only ([#36](https://github.com/ipld/js-ipld-garbage/issues/36)) ([464080f](https://github.com/ipld/js-ipld-garbage/commit/464080fac554f50ce97d97760a24a79ef692a6b2))
+
+
+### Trivial Changes
+
+* **no-release:** bump actions/setup-node from 3.3.0 to 3.4.0 ([#30](https://github.com/ipld/js-ipld-garbage/issues/30)) ([f5bb329](https://github.com/ipld/js-ipld-garbage/commit/f5bb3295e22b1b41f1012d021300f9a76bcb79ae))
+* **no-release:** bump actions/setup-node from 3.4.0 to 3.4.1 ([#31](https://github.com/ipld/js-ipld-garbage/issues/31)) ([69e12de](https://github.com/ipld/js-ipld-garbage/commit/69e12de49701f691aadbde43ce31c00be992c09f))
+* **no-release:** bump actions/setup-node from 3.4.1 to 3.5.0 ([#32](https://github.com/ipld/js-ipld-garbage/issues/32)) ([27a9d56](https://github.com/ipld/js-ipld-garbage/commit/27a9d56c9ed2c577ede2afb2cd326c7584eb395c))
+* **no-release:** bump actions/setup-node from 3.5.0 to 3.5.1 ([#34](https://github.com/ipld/js-ipld-garbage/issues/34)) ([81dab8c](https://github.com/ipld/js-ipld-garbage/commit/81dab8cf01b7d05ea7cc358faf84018f5023bc75))
+
+
+### Documentation
+
+* update readme badges and repo links ([cfe5d1b](https://github.com/ipld/js-ipld-garbage/commit/cfe5d1b3550a339782a414fabb399461edee7547))
+
 ## [5.0.0](https://github.com/rvagg/js-ipld-garbage/compare/v4.0.10...v5.0.0) (2022-06-14)
 
 
