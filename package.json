@@ -4,13 +4,13 @@
   "description": "Garbage data generator for the IPLD Data Model",
   "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
   "license": "Apache-2.0 OR MIT",
-  "homepage": "https://github.com/achingbrain/js-ipld-garbage#readme",
+  "homepage": "https://github.com/ipld/js-ipld-garbage#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/achingbrain/js-ipld-garbage.git"
+    "url": "git+https://github.com/ipld/js-ipld-garbage.git"
   },
   "bugs": {
-    "url": "https://github.com/achingbrain/js-ipld-garbage/issues"
+    "url": "https://github.com/ipld/js-ipld-garbage/issues"
   },
   "keywords": [
     "IPLD",

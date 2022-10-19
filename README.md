@@ -1,7 +1,7 @@
 # @ipld/garbage <!-- omit in toc -->
 
-[![codecov](https://img.shields.io/codecov/c/github/achingbrain/js-ipld-garbage.svg?style=flat-square)](https://codecov.io/gh/achingbrain/js-ipld-garbage)
-[![CI](https://img.shields.io/github/workflow/status/achingbrain/js-ipld-garbage/test%20&%20maybe%20release/master?style=flat-square)](https://github.com/achingbrain/js-ipld-garbage/actions/workflows/js-test-and-release.yml)
+[![codecov](https://img.shields.io/codecov/c/github/ipld/js-ipld-garbage.svg?style=flat-square)](https://codecov.io/gh/ipld/js-ipld-garbage)
+[![CI](https://img.shields.io/github/workflow/status/ipld/js-ipld-garbage/test%20&%20maybe%20release/master?style=flat-square)](https://github.com/ipld/js-ipld-garbage/actions/workflows/js-test-and-release.yml)
 
 > Garbage data generator for the IPLD Data Model
 
