@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/ipld/js-ipld-garbage/compare/v6.0.0...v6.0.1) (2023-01-03)
+
+
+### Dependencies
+
+* bump multiformats from 10.0.3 to 11.0.0 ([f19e29d](https://github.com/ipld/js-ipld-garbage/commit/f19e29d7f734edd6891c211561ba6f031c69dc1f))
+
 ## [6.0.0](https://github.com/ipld/js-ipld-garbage/compare/v5.0.0...v6.0.0) (2022-10-19)
 
 
