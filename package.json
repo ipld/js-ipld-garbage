@@ -161,7 +161,7 @@
     "dep-check": "aegir dep-check"
   },
   "dependencies": {
-    "multiformats": "^11.0.0"
+    "multiformats": "^12.1.0"
   },
   "devDependencies": {
     "@sindresorhus/is": "^6.0.0",
