@@ -1,3 +1,22 @@
+## [6.0.2](https://github.com/ipld/js-ipld-garbage/compare/v6.0.1...v6.0.2) (2023-08-28)
+
+
+### Bug Fixes
+
+* lint! ([acd3189](https://github.com/ipld/js-ipld-garbage/commit/acd3189fb93a635f6bf3e5ce19d4ae579d4e742d))
+* remove old workflow ([885d44d](https://github.com/ipld/js-ipld-garbage/commit/885d44d9058b3c93f0fa19b1a87bb2233d46e5d7))
+
+
+### Trivial Changes
+
+* add or force update .github/workflows/js-test-and-release.yml ([a2cb066](https://github.com/ipld/js-ipld-garbage/commit/a2cb066b732972a2090fe911e9b9ef02be5df796))
+* delete templates [skip ci] ([#55](https://github.com/ipld/js-ipld-garbage/issues/55)) ([5bc4292](https://github.com/ipld/js-ipld-garbage/commit/5bc4292253cf94153184ff73026b5cb8d90b3398))
+
+
+### Dependencies
+
+* **dev:** bump aegir from 37.12.1 to 40.0.11 ([5ac2a2f](https://github.com/ipld/js-ipld-garbage/commit/5ac2a2fa179ad07c797e1dc4d6bb111fc96cd98f))
+
 ## [6.0.1](https://github.com/ipld/js-ipld-garbage/compare/v6.0.0...v6.0.1) (2023-01-03)
 
 
