@@ -1,5 +1,5 @@
-import { garbage } from '../src/index.js'
 import is from '@sindresorhus/is'
+import { garbage } from '../src/index.js'
 
 const expectedTypes = ['null', 'boolean', 'int', 'float', 'string', 'Uint8Array', 'Array', 'Object', 'CID']
 
