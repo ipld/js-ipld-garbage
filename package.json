@@ -164,7 +164,7 @@
     "multiformats": "^11.0.0"
   },
   "devDependencies": {
-    "@sindresorhus/is": "^5.3.0",
+    "@sindresorhus/is": "^6.0.0",
     "aegir": "^40.0.11"
   }
 }
