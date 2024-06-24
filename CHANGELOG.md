@@ -1,3 +1,9 @@
+## [6.0.7](https://github.com/ipld/js-ipld-garbage/compare/v6.0.6...v6.0.7) (2024-06-24)
+
+### Dependencies
+
+* **dev:** bump aegir from 42.2.11 to 44.0.0 ([901ef73](https://github.com/ipld/js-ipld-garbage/commit/901ef7346fe7230b81c1f206e053509eae5fdd77))
+
 ## [6.0.6](https://github.com/ipld/js-ipld-garbage/compare/v6.0.5...v6.0.6) (2024-01-10)
 
 
