@@ -165,6 +165,6 @@
   },
   "devDependencies": {
     "@sindresorhus/is": "^6.0.0",
-    "aegir": "^44.0.0"
+    "aegir": "^45.0.1"
   }
 }
