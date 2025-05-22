@@ -9,7 +9,7 @@ const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`
 const baseOptions = { initialWeights: { map: 10, list: 10 } }
 /**
  * @param {number} [count=200]
- * @param {import('./interface').GarbageOptions} [options]
+ * @param {import('./interface.js').GarbageOptions} [options]
  * @returns {any}
  */
 export function garbage (count = 200, options) {
@@ -19,7 +19,7 @@ export function garbage (count = 200, options) {
 
 /**
  * @param {number} count
- * @param {import('./interface').GarbageOptions} options
+ * @param {import('./interface.js').GarbageOptions} options
  * @returns {any}
  */
 function generate (count, options) {
@@ -45,7 +45,7 @@ function generate (count, options) {
   const rnd = Math.random() * totWeight
   let wacc = 0
   for (const [type, weight] of types) {
-    wacc += weight
+    wacc += /** @type {number } */(weight)
     if (wacc >= rnd) {
       // @ts-ignore not sure why I can't index with [t] from a fixed list of properties
       return generators[type](count, options)
@@ -70,7 +70,7 @@ function rndByte () {
 const generators = {
   /**
    * @param {number} count
-   * @param {import('./interface').GarbageOptions} options
+   * @param {import('./interface.js').GarbageOptions} options
    * @returns {[number, Array<any>]}
    */
   list (count, options) {
@@ -87,7 +87,7 @@ const generators = {
 
   /**
    * @param {number} count
-   * @param {import('./interface').GarbageOptions} options
+   * @param {import('./interface.js').GarbageOptions} options
    * @returns {[number, {[key: string]: any}]}
    */
   map (count, options) {
