@@ -1,3 +1,18 @@
+## [6.0.10](https://github.com/ipld/js-ipld-garbage/compare/v6.0.9...v6.0.10) (2025-05-22)
+
+### Bug Fixes
+
+* type lints ([27f0af4](https://github.com/ipld/js-ipld-garbage/commit/27f0af46f771308f39776a2d0e7e2a34fd02d37e))
+
+### Trivial Changes
+
+* exclude package-lock ([6a44019](https://github.com/ipld/js-ipld-garbage/commit/6a4401985bd28390070c447974fa69dec59ee99b))
+* remove package-lock.json ([923d21f](https://github.com/ipld/js-ipld-garbage/commit/923d21fd31d93ed39d98835fbde6c0a0343e12c7))
+
+### Dependencies
+
+* **dev:** bump aegir from 46.0.5 to 47.0.10 ([1e71caa](https://github.com/ipld/js-ipld-garbage/commit/1e71caa77b6be7cca95ac6d0378bc39a23676fd7))
+
 ## [6.0.9](https://github.com/ipld/js-ipld-garbage/compare/v6.0.8...v6.0.9) (2025-05-08)
 
 ### Dependencies
