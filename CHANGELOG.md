@@ -1,3 +1,9 @@
+## [6.0.11](https://github.com/ipld/js-ipld-garbage/compare/v6.0.10...v6.0.11) (2025-06-04)
+
+### Dependencies
+
+* **dev:** bump @sindresorhus/is from 6.3.1 to 7.0.2 ([#75](https://github.com/ipld/js-ipld-garbage/issues/75)) ([f1edcb1](https://github.com/ipld/js-ipld-garbage/commit/f1edcb135314a90e7a952db23977904e21aadeee))
+
 ## [6.0.10](https://github.com/ipld/js-ipld-garbage/compare/v6.0.9...v6.0.10) (2025-05-22)
 
 ### Bug Fixes
